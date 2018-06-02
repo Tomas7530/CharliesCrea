@@ -236,6 +236,7 @@
                 var name = $('#name').val();
                 var email = $('#email').val();
                 var message = $('#message').val();
+                console.log(cart);
 
                 if (!name || !email || !message) {
                     alert('manque un champ');
