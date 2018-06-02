@@ -247,8 +247,7 @@
                     name: name,
                     email: email,
                     message: message,
-                    cart: cart,
-                    tissu1: tissu1
+                    cart: cart
                 }, function (data, status) {
                     console.log(data, status);
                 }).fail(function (error, a, b, c) {

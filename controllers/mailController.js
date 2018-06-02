@@ -36,7 +36,7 @@ exports.send = function (req, res) {
 
     for (var i = 0; i < req.body.cart.length; i++) {
         html += '<br/>' +
-            req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € '
+            req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € ' + req.body.cart[i].tissu1
     }
 
     // setup email data with unicode symbols
