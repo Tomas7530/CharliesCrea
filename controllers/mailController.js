@@ -78,7 +78,7 @@ exports.send = function (req, res) {
     let mailOptions = {
         from: '"Charlie\'s Créa 👻" <contact@charliescrea.fr>', // sender address
         //to: 'fabre.tomas@hotmail.fr, ' + req.body.email, // list of receivers
-        to: 'fabre.tomas@hotmail.fr' 'fabre.tomas.ft@gmail.com', // list of receivers
+        to: 'fabre.tomas.ft@gmail.com', // list of receivers
         subject: 'Commande sur charliescrea', // Subject line
         //text: 'merci pour votre commande de ' + req.body.commande, // plain text body
         html: html
