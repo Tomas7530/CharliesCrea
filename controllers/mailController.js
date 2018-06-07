@@ -32,7 +32,7 @@ exports.send = function (req, res) {
         '<table bgcolor="#343846" width="100%" border="0" cellpadding="0" cellspacing="0">' +
         '<tbody>' +
         '<tr>' +
-        '<td>' +
+        '<td>'
 
     for (var i = 0; i < req.body.cart.length; i++) {
         html += '<br/>' +
