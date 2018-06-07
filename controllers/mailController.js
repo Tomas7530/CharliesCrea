@@ -135,11 +135,9 @@ exports.send = function (req, res) {
             '<tbody>' +
             '<tr>' +
             '<td align="center">' +
-            '<img src="image/' +
+            '<img src="https://raw.githubusercontent.com/Tomas7530/CharliesCrea/master/public/images/' +
             req.body.cart[i].surname +
-            '".jpg" />" alt="' +
-            req.body.cart[i].surname +
-            '" width="75">' +
+            '.jpg>' +
             '</td>' +
             '<td width="40" style="font-size: 28px; line-height: 30px;">' +
             '&nbsp;' +
