@@ -135,7 +135,11 @@ exports.send = function (req, res) {
             '<tbody>' +
             '<tr>' +
             '<td align="center">' +
-            '<img src="https://i.goopics.net/JYbb0.jpg" alt="userlogo" width="75">' +
+            '<img src="image/' +
+            req.body.cart[i].surname +
+            '".jpg" />" alt="' +
+            req.body.cart[i].surname +
+            '" width="75">' +
             '</td>' +
             '<td width="40" style="font-size: 40px; line-height: 40px;">' +
             '&nbsp;' +
