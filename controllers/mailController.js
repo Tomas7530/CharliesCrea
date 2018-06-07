@@ -21,22 +21,31 @@ exports.send = function (req, res) {
         });
     }
 
-    var html = '<b>bonjour Marie-Charlotte</b>' +
-        '<br/>' +
-        '<br/>' +
-        'Une nouvelle commande a été passé sur le site' +
-        '<br/>' +
-        '<br/>' +
-        'nom : ' + req.body.name +
-        '<br/>' +
-        'e-mail : ' + req.body.email +
-        '<br/>' +
-        'message : ' + req.body.message +
-        '<br/>'
+    var html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' +
+        '<html xmlns:v="urn:schemas-microsoft-com:vml">' +
+        '<head>' +
+        '<meta http-equiv="content-type" content="text/html; charset=utf-8">' +
+        '<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">' +
+        '<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">' +
+        '</head>' +
+        '<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">' +
+        '<table bgcolor="#343846" width="100%" border="0" cellpadding="0" cellspacing="0">' +
+        '<tbody>' +
+        '<tr>' +
+        '<td>' +
+        'youyoyuoyuoyu' +
+        '</td>' +
+        '</tr>' +
+        '</tbody>' +
+        '</table>' +
+        '</html>'
 
     for (var i = 0; i < req.body.cart.length; i++) {
         html += '<br/>' +
-            req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € '
+            req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € ' +
+            '<br/>' +
+            'Tissu1 n° ' +
+            req.body.cart[i].tissu1
     }
 
     // setup email data with unicode symbols
