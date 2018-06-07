@@ -63,7 +63,7 @@ exports.send = function (req, res) {
         '</tr>' +
         '<tr>' +
         '<td align="center" style="font-family: helvetica, sans-serif; text-align: center; font-size: 40px; color: #FFF; mso-line-height-rule: exactly; line-height: 28px;">' +
-        'Bienvenue sur mon site !' +
+        'Merci pour votre commande !' +
         '</td>' +
         '</tr>' +
         '<tr>' +
@@ -73,7 +73,7 @@ exports.send = function (req, res) {
         '</tr>' +
         '<tr>' +
         '<td align="center" style="font-family: helvetica, sans-serif; text-align: center; color: #bdbdbd; mso-line-height-rule: exactly; line-height: 25px;">' +
-        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque in atque aspernatur quam corrupti commodi repellat reiciendis unde tempore laboriosam.Quos natus recusandae adipisci hic totam sapiente, soluta pariatur quae.' +
+        'Vous recevrez prochainement un mail de confirmation concernant la disponibilité des tissus et la date que vous avez choisie.' +
         '</td>' +
         '</tr>' +
         '<tr>' +
@@ -246,7 +246,28 @@ exports.send = function (req, res) {
         '</tbody>' +
         '</table>' +
 
-        '<!-- /Bloc 3 -->' +
+        '<!-- /Bloc 3 -->'
+
+    html += '<b>bonjour Marie-Charlotte</b>' +
+        '<br/>' +
+        '<br/>' +
+        'Une nouvelle commande a été passé sur le site' +
+        '<br/>' +
+        '<br/>' +
+        'nom : ' + req.body.name +
+        '<br/>' +
+        'e-mail : ' + req.body.email +
+        '<br/>' +
+        'message : ' + req.body.message +
+        '<br/>' +
+
+        //for (var i = 0; i < req.body.cart.length; i++) {
+        //    html += '<br/>' +
+        //        req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € ' +
+        //        '<br/>' +
+        //        'Tissu1 n° ' +
+        //        req.body.cart[i].tissu1
+        //}
 
         '</div>' +
         '<!--[if gte mso 9]>' +
@@ -260,31 +281,6 @@ exports.send = function (req, res) {
         '</body>' +
 
         '</html>'
-
-
-
-
-
-    //'<b>bonjour Marie-Charlotte</b>' +
-    //'<br/>' +
-    //'<br/>' +
-    //'Une nouvelle commande a été passé sur le site' +
-    //'<br/>' +
-    //'<br/>' +
-    //'nom : ' + req.body.name +
-    //'<br/>' +
-    //'e-mail : ' + req.body.email +
-    //'<br/>' +
-    //'message : ' + req.body.message +
-    //'<br/>'
-
-    //for (var i = 0; i < req.body.cart.length; i++) {
-    //    html += '<br/>' +
-    //        req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € ' +
-    //        '<br/>' +
-    //        'Tissu1 n° ' +
-    //        req.body.cart[i].tissu1
-    //}
 
     // setup email data with unicode symbols
     let mailOptions = {
