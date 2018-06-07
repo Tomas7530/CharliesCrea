@@ -32,10 +32,10 @@ exports.send = function (req, res) {
         '<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">' +
         '<table bgcolor="#1B1F22" width="100%" border="0" cellspacing="0" cellpadding="0">' +
         '<tr>' +
-        '<td background="https://i.goopics.net/kVl0J.png" bgcolor="#1B1F22" valign="top">' +
+        '<td background="https://goo.pics/kVl0J" bgcolor="#1B1F22" valign="top">' +
         '<!--[if gte mso 9]>' +
         '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">' +
-        '<v:fill type="tile" src="https://i.goopics.net/kVl0J.png" color="#1B1F22" />' +
+        '<v:fill type="tile" src="https://goo.pics/kVl0J" color="#1B1F22" />' +
         '<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">' +
         '<![endif]-->' +
         '<div>' +
