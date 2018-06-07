@@ -30,10 +30,10 @@ exports.send = function (req, res) {
         '<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">' +
         '<table cellpadding="0" cellspacing="0" border="0" width="100%">' +
         '<tr>' +
-        '<td background="https://i.imgur.com/YJOX1PC.png" bgcolor="#7bceeb" valign="top">' +
+        '<td background="https://i.goopics.net/kVl0J.png" bgcolor="#7bceeb" valign="top">' +
         '<!--[if gte mso 9]>' +
         '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">' +
-        '<v:fill type="tile" src="https://i.imgur.com/YJOX1PC.png" color="#7bceeb" />' +
+        '<v:fill type="tile" src="https://i.goopics.net/kVl0J.png" color="#7bceeb" />' +
         '<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">' +
         '<![endif]-->' +
         '<div>' +
