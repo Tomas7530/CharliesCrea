@@ -21,31 +21,34 @@ exports.send = function (req, res) {
         });
     }
 
-    var html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">' +
-        '<html xmlns:v="urn:schemas-microsoft-com:vml">' +
+    var html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' +
+        '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xml:lang="fr" lang="fr">' +
         '<head>' +
-        '<meta http-equiv="content-type" content="text/html; charset=utf-8">' +
+        '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />' +
         '<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">' +
         '<link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet" type="text/css">' +
+        '<title>Titre de la page</title>' +
         '</head>' +
         '<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">' +
-        '<table bgcolor="#343846" width="100%" border="0" cellpadding="0" cellspacing="0">' +
-        '<tbody>' +
+        '<table bgcolor="#1B1F22" width="100%" border="0" cellspacing="0" cellpadding="0">' +
         '<tr>' +
-        '<td>'
-
-    for (var i = 0; i < req.body.cart.length; i++) {
-        html += '<br/>' +
-            req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' + req.body.cart[i].price + ' € ' +
-            '<br/>' +
-            'Tissu1 n° ' +
-            req.body.cart[i].tissu1
-    }
-
-    html += '</td>' +
+        '<td background="https://i.goopics.net/kVl0J.png" bgcolor="#1B1F22" valign="top">' +
+        '<!--[if gte mso 9]>' +
+        '<v:rect xmlns:v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="mso-width-percent:1000;">' +
+        '<v:fill type="tile" src="https://i.goopics.net/kVl0J.png" color="#1B1F22" />' +
+        '<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">' +
+        '<![endif]-->' +
+        '<div>' +
+        '&nbsp;' +
+        '</div>' +
+        '<!--[if gte mso 9]>' +
+        '</v:textbox>' +
+        '</v:rect>' +
+        '<![endif]-->' +
+        '</td>' +
         '</tr>' +
-        '</tbody>' +
         '</table>' +
+        '</body>' +
         '</html>'
 
     // setup email data with unicode symbols
