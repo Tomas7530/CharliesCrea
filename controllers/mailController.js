@@ -32,6 +32,7 @@ exports.send = function (req, res) {
         '<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">' +
 
         '<!-- Header -->' +
+
         '<table bgcolor="#1B1F22" width="100%" cellpadding="0" cellspacing="0" border="0">' +
         '<tbody>' +
         '<tr>' +
@@ -85,6 +86,87 @@ exports.send = function (req, res) {
         '</table>' +
 
         '<!-- /Header -->' +
+
+        '<!-- recap commande -->' +
+
+        '<table bgcolor="#303030" width="100%" cellpadding="0" cellspacing="0" border="0">' +
+        '<tbody>' +
+        '<tr>' +
+        '<td height="30" style="font-size: 30px; line-height: 30px;">' +
+        '&nbsp;' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td>' +
+        '<table width="590" align="center" cellpadding="0" cellspacing="0" border="0">' +
+        '<tr>' +
+        '<td align="center" style="font-family: helvetica, sans-serif; font-size: 35px; text-align: center; color: #DCDCDC; mso-line-height-rule: exactly; line-height: 25px;">' +
+        'Votre commande :' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td height="20" style="font-size: 20px; line-height: 20px;">' +
+        '&nbsp;' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td align="center">' +
+        '<table width="75" align="center" cellpadding="0" cellspacing="0" border="0" bgcolor="#FFF">' +
+        '<tbody>' +
+        '<tr>' +
+        '<td height="3" style="font-size: 3px; line-height: 3px;">' +
+        '&nbsp;' +
+        '</td>' +
+        '</tr>' +
+        '</tbody>' +
+        '</table>' +
+        '</td>' +
+        '</tr>' +
+        '<tr>' +
+        '<td height="30" style="font-size: 30px; line-height: 30px;">' +
+        '&nbsp;' +
+        '</td>' +
+        '</tr>'
+
+    for (var i = 0; i < req.body.cart.length; i++) {
+        html += '<tr>' +
+            '<td>' +
+            '<table width="590" align="center" cellpadding="0" cellspacing="0">' +
+            '<tbody>' +
+            '<tr>' +
+            '<td align="center">' +
+            '<img src="https://i.goopics.net/JYbb0.jpg" alt="userlogo" width="75">' +
+            '</td>' +
+            '<td width="40" style="font-size: 40px; line-height: 40px;">' +
+            '&nbsp;' +
+            '</td>' +
+            '<td height="30" style="font-family: helvetica, sans-serif; font-size: 22px; text-align: center; color: #bdbdbd; mso-line-height-rule: exactly; line-height: 20px;">' +
+            req.body.cart[i].category + ' - ' + req.body.cart[i].desc + ' : ' +
+            '</td>' +
+            '<td width="40" style="font-size: 40px; line-height: 40px;">' +
+            '&nbsp;' +
+            '</td>' +
+            '<td align="center" style="font-family: helvetica, sans-serif; font-size: 13px; text-align: center; color: #bdbdbd; mso-line-height-rule: exactly; line-height: 22px;">' +
+            'Tissu principal n° : ' +
+            req.body.cart[i].tissu1 +
+            '</td>' +
+            '</tr>' +
+            '<tr>' +
+            '<td height="20" style="font-size: 20px; line-height: 20px;">' +
+            '&nbsp;' +
+            '</td>' +
+            '</tr>' +
+            '</tbody>' +
+            '</table>' +
+            '</td>' +
+            '</tr>'
+    }
+
+    html += '</table>' +
+        '</td>' +
+        '</tr>' +
+        '</tbody>' +
+        '</table>' +
 
         '<!-- Bloc 3 -->' +
 
@@ -246,20 +328,20 @@ exports.send = function (req, res) {
         '</tbody>' +
         '</table>' +
 
-        '<!-- /Bloc 3 -->'
+        '<!-- /Bloc 3 -->' +
 
-    html += '<b>bonjour Marie-Charlotte</b>' +
-        '<br/>' +
-        '<br/>' +
-        'Une nouvelle commande a été passé sur le site' +
-        '<br/>' +
-        '<br/>' +
-        'nom : ' + req.body.name +
-        '<br/>' +
-        'e-mail : ' + req.body.email +
-        '<br/>' +
-        'message : ' + req.body.message +
-        '<br/>' +
+        //html += '<b>bonjour Marie-Charlotte</b>' +
+        //'<br/>' +
+        //'<br/>' +
+        //'Une nouvelle commande a été passé sur le site' +
+        //'<br/>' +
+        //'<br/>' +
+        //'nom : ' + req.body.name +
+        //'<br/>' +
+        //'e-mail : ' + req.body.email +
+        //'<br/>' +
+        //'message : ' + req.body.message +
+        //'<br/>' +
 
         //for (var i = 0; i < req.body.cart.length; i++) {
         //    html += '<br/>' +
