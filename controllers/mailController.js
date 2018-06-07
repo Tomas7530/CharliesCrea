@@ -93,7 +93,7 @@ exports.send = function (req, res) {
         '<tr>' +
         '<td height="30" style="font-size: 30px; line-height: 30px;">' +
         '&nbsp;' +
-        '</td>' +&
+        '</td>' +
         '</tr>' +
         '<tr>' +
         '<td>' +
