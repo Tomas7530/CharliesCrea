@@ -33,12 +33,6 @@ exports.send = function (req, res) {
         '<tbody>' +
         '<tr>' +
         '<td>' +
-        'youyoyuoyuoyu' +
-        '</td>' +
-        '</tr>' +
-        '</tbody>' +
-        '</table>' +
-        '</html>'
 
     for (var i = 0; i < req.body.cart.length; i++) {
         html += '<br/>' +
@@ -47,6 +41,12 @@ exports.send = function (req, res) {
             'Tissu1 n° ' +
             req.body.cart[i].tissu1
     }
+
+    html += '</td>' +
+        '</tr>' +
+        '</tbody>' +
+        '</table>' +
+        '</html>'
 
     // setup email data with unicode symbols
     let mailOptions = {
