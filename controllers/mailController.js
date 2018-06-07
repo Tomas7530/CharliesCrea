@@ -62,7 +62,7 @@ exports.send = function (req, res) {
         '</td>' +
         '</tr>' +
         '<tr>' +
-        '<td align="center" style="font-family: helvetica, sans-serif; text-align: center; font-size: 40px; color: #FFF; mso-line-height-rule: exactly; line-height: 28px;">' +
+        '<td align="center" style="font-family: helvetica, sans-serif; text-align: center; font-size: 40px; color: #FFF; mso-line-height-rule: exactly; line-height: 40px;">' +
         'Votre commande a bien été prise en compte !' +
         '</td>' +
         '</tr>' +
