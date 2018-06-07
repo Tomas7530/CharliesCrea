@@ -141,7 +141,7 @@ exports.send = function (req, res) {
             req.body.cart[i].surname +
             '" width="75">' +
             '</td>' +
-            '<td width="40" style="font-size: 40px; line-height: 40px;">' +
+            '<td width="40" style="font-size: 28px; line-height: 30px;">' +
             '&nbsp;' +
             '</td>' +
             '<td height="30" style="font-family: helvetica, sans-serif; font-size: 22px; text-align: center; color: #bdbdbd; mso-line-height-rule: exactly; line-height: 20px;">' +
