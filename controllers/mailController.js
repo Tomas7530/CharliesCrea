@@ -22,10 +22,12 @@ exports.send = function (req, res) {
     }
 
     var html = '<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">' +
-        '<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">' +
+        '<html xmlns:v="urn:schemas-microsoft-com:vml">' +
         '<head>' +
-        '<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />' +
+        '<meta http-equiv="content-Type" content="text/html; charset=utf-8">' +
+        '<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">' +
         '</head>' +
+        '<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">' +
         '<table cellpadding="0" cellspacing="0" border="0" width="100%">' +
         '<tr>' +
         '<td background="https://i.imgur.com/YJOX1PC.png" bgcolor="#7bceeb" valign="top">' +
@@ -44,6 +46,7 @@ exports.send = function (req, res) {
         '</td>' +
         '</tr>' +
         '</table>' +
+        '</body>' +
         '</html>'
 
 
