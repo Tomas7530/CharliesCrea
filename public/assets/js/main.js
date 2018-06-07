@@ -178,6 +178,7 @@
                 if (cat == false || cat == "undefined") {
                     selectItem['desc'] = name;
                     selectItem['price'] = $('.wrapper-modele option:selected').attr('price');
+                    selectItem['surname'] = surname;
 
                     //ajouter option de choix(function)
                     choiceOption(option);
@@ -303,7 +304,7 @@
                     }, 100);
                 }, 750);
                 return;
-            });
+            }); selectItem
 
             $('input[class="ajouter"]').click(function () {
                 if (!requeteEnCours) {
