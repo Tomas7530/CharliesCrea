@@ -325,6 +325,7 @@
 
             $('#option-select').on('click', '.image-button', function () {
                 $('#option').addClass('option-activ');
+                $window.scrollTop(0);
                 $('#option').show();
                 rang = $(this).attr('rang');
                 return rang;
