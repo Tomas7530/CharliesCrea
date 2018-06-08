@@ -21,7 +21,7 @@ exports.send = function (req, res) {
         });
     }
 
-    var html = require('index.ejs')
+    var html = require('./mail.ejs')
 
     // setup email data with unicode symbols
     let mailOptions = {
