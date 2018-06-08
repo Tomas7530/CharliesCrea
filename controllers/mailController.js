@@ -23,7 +23,7 @@ exports.send = function (req, res) {
         });
     }
 
-    const filename = path.join(__dirname, './public/email.html');
+    const filename = path.join(__dirname, 'email.html');
 
     fs.readFile(filename, (err, content) => {
         console.log(String(content));
