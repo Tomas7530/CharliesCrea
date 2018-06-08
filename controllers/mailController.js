@@ -1,6 +1,8 @@
 'use strict'
 
 const nodemailer = require('nodemailer')
+const fs = require('fs')
+const path = require('path')
 var transporter = null
 
 exports.send = function (req, res) {
@@ -21,7 +23,13 @@ exports.send = function (req, res) {
         });
     }
 
-    var html = require('./mail.ejs')
+    const filename = path.join(__dirname, './public/email.html');
+
+    fs.readFile(filename, (err, content) => {
+        console.log(String(content));
+    });
+
+    var html = filename
 
     // setup email data with unicode symbols
     let mailOptions = {
