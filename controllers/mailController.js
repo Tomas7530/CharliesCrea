@@ -28,10 +28,11 @@ exports.send = function (req, res) {
     var html;
 
     fs.readFile(email, (err, content) => {
-        console.log(String(content));
         html = String(content);
         return html;
     });
+
+    console.log(html);
 
     // setup email data with unicode symbols
     let mailOptions = {
