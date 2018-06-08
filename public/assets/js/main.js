@@ -325,7 +325,7 @@
 
             $('#option-select').on('click', '.image-button', function () {
                 $('#option').addClass('option-activ');
-                $('#option').css({ 'display': 'block' })
+                $('#option').show();
                 rang = $(this).attr('rang');
                 return rang;
             });
@@ -527,7 +527,7 @@
                 $article.removeClass('active');
 
                 // Hide article, section, main.
-                $('#option').css({ 'display': 'none' });
+                $('#option').css({ 'display': 'none !important' });
                 $work._hide(true);
                 $section.hide();
                 $article.hide();
@@ -568,7 +568,7 @@
             setTimeout(function () {
 
                 // Hide article, section, main.
-                $('#option').css({ 'display': 'none' });
+                $('#option').css({ 'display': 'none !important' });
                 $work._hide(true);
                 $section.hide();
                 $article.hide();
