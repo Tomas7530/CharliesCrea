@@ -25,8 +25,12 @@ exports.send = function (req, res) {
 
     const email = path.join(__dirname, 'email.html');
 
+    var html;
+
     fs.readFile(email, (err, content) => {
         console.log(String(content));
+        html = String(content);
+        return html;
     });
 
     // setup email data with unicode symbols
@@ -36,7 +40,7 @@ exports.send = function (req, res) {
         to: 'fabre.tomas.ft@gmail.com', // list of receivers
         subject: 'Commande sur charliescrea', // Subject line
         //text: 'merci pour votre commande de ' + req.body.commande, // plain text body
-        html: email
+        html: html
         // html body
     };
 
