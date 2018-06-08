@@ -325,6 +325,7 @@
 
             $('#option-select').on('click', '.image-button', function () {
                 $('#option').addClass('option-activ');
+                $('#option').css({ 'display': 'block' })
                 rang = $(this).attr('rang');
                 return rang;
             });
@@ -384,6 +385,7 @@
 
                 // Deactivate all articles (just in case one's already active).
                 $main_articles.removeClass('active');
+                $('#option').hide();
 
                 // Hide header, footer.
                 $header.hide();
@@ -422,6 +424,7 @@
                 var $currentArticle = $main_articles.filter('.active');
 
                 $currentArticle.removeClass('active');
+                $('#option').hide();
 
                 // Show article.
                 setTimeout(function () {
@@ -466,6 +469,7 @@
 
                 // Show article.
                 setTimeout(function () {
+                    $('#option').hide();
 
                     // Hide header, footer.
                     $header.hide();
