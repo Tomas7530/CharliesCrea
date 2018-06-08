@@ -28,6 +28,15 @@
 
 }
 
+@font-face {
+    font-family: 'animalsnormal';
+    src: url('../fonts/aanim____-webfont.woff2') format('woff2'),
+         url('../fonts/aanim____-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 .cache{
     display: none;
 }
