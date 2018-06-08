@@ -12,4 +12,8 @@ module.exports = function (app) {
     app.route('/api/send_mail')
         .post(controllers.mail.send);
 
+
+    app.route('/api/test_mail')
+        .get(controllers.mail.test);
+
 }
