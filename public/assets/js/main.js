@@ -390,7 +390,6 @@
                 // Hide header, footer.
                 $header.hide();
                 $footer.hide();
-                $('#option').css({ 'display': 'none !important' });
 
                 // Show main, article.
                 $main.show();
@@ -425,7 +424,6 @@
                 var $currentArticle = $main_articles.filter('.active');
 
                 $currentArticle.removeClass('active');
-                $('#option').css({ 'display': 'none !important' });
 
                 // Show article.
                 setTimeout(function () {
@@ -474,7 +472,6 @@
                     // Hide header, footer.
                     $header.hide();
                     $footer.hide();
-                    $('#option').css({ 'display': 'none !important' });
 
                     // Show main, article.
                     $main.show();
@@ -531,7 +528,6 @@
                 $article.removeClass('active');
 
                 // Hide article, section, main.
-                $('#option').css({ 'display': 'none !important' });
                 $work._hide(true);
                 $section.hide();
                 $article.hide();
@@ -572,7 +568,6 @@
             setTimeout(function () {
 
                 // Hide article, section, main.
-                $('#option').css({ 'display': 'none !important' });
                 $work._hide(true);
                 $section.hide();
                 $article.hide();
