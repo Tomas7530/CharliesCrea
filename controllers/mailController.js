@@ -21,6 +21,8 @@ exports.send = function (req, res) {
         });
     }
 
+    var html = require('index.ejs')
+
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"Charlie\'s Créa 👻" <contact@charliescrea.fr>', // sender address
@@ -28,7 +30,7 @@ exports.send = function (req, res) {
         to: 'fabre.tomas.ft@gmail.com', // list of receivers
         subject: 'Commande sur charliescrea', // Subject line
         //text: 'merci pour votre commande de ' + req.body.commande, // plain text body
-        html: index.ejs
+        html: html
         // html body
     };
 
