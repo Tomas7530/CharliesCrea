@@ -23,13 +23,11 @@ exports.send = function (req, res) {
         });
     }
 
-    const filename = path.join(__dirname, 'email.html');
+    const email = path.join(__dirname, 'email.html');
 
-    fs.readFile(filename, (err, content) => {
+    fs.readFile(email, (err, content) => {
         console.log(String(content));
     });
-
-    var html = filename
 
     // setup email data with unicode symbols
     let mailOptions = {
@@ -38,7 +36,7 @@ exports.send = function (req, res) {
         to: 'fabre.tomas.ft@gmail.com', // list of receivers
         subject: 'Commande sur charliescrea', // Subject line
         //text: 'merci pour votre commande de ' + req.body.commande, // plain text body
-        html: html
+        html: email
         // html body
     };
 
