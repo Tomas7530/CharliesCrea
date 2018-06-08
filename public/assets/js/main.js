@@ -385,7 +385,6 @@
 
                 // Deactivate all articles (just in case one's already active).
                 $main_articles.removeClass('active');
-                $('#option').hide();
 
                 // Hide header, footer.
                 $header.hide();
@@ -424,7 +423,6 @@
                 var $currentArticle = $main_articles.filter('.active');
 
                 $currentArticle.removeClass('active');
-                $('#option').hide();
 
                 // Show article.
                 setTimeout(function () {
@@ -469,7 +467,6 @@
 
                 // Show article.
                 setTimeout(function () {
-                    $('#option').hide();
 
                     // Hide header, footer.
                     $header.hide();
@@ -530,6 +527,7 @@
                 $article.removeClass('active');
 
                 // Hide article, section, main.
+                $('#option').css({ 'display': 'none' });
                 $work._hide(true);
                 $section.hide();
                 $article.hide();
@@ -570,6 +568,7 @@
             setTimeout(function () {
 
                 // Hide article, section, main.
+                $('#option').css({ 'display': 'none' });
                 $work._hide(true);
                 $section.hide();
                 $article.hide();
