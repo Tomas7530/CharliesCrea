@@ -389,6 +389,7 @@
                 // Hide header, footer.
                 $header.hide();
                 $footer.hide();
+                $('#option').css({ 'display': 'none !important' });
 
                 // Show main, article.
                 $main.show();
@@ -423,6 +424,7 @@
                 var $currentArticle = $main_articles.filter('.active');
 
                 $currentArticle.removeClass('active');
+                $('#option').css({ 'display': 'none !important' });
 
                 // Show article.
                 setTimeout(function () {
@@ -471,6 +473,7 @@
                     // Hide header, footer.
                     $header.hide();
                     $footer.hide();
+                    $('#option').css({ 'display': 'none !important' });
 
                     // Show main, article.
                     $main.show();
