@@ -221,13 +221,6 @@
 					<!-- option select -->
 					<div id="option-select"></div>
 
-					<div class="row">
-						<div class="one-third column">
-							<label for="date">Date commande</label>
-							<input type="date" name="date" id="date" value="" min="2018-03-01" max="2020-12-31" />
-							<br>
-						</div>
-					</div>
 					<div align="center" class="br">
 						<input type="submit" value="Ajouter au panier" class="ajouter" onclick="return false;" />
 					</div>
@@ -241,7 +234,7 @@
 								<tr>
 									<th>Categorie</th>
 									<th>Description</th>
-									<th>Date</th>
+									<th>Tissus</th>
 									<th>Prix</th>
 									<th></th>
 								</tr>
@@ -250,7 +243,7 @@
 								<tr class="1">
 									<td class="com-1-cat"></td>
 									<td class="com-1-des"></td>
-									<td class="com-1-dat number"></td>
+									<td class="com-1-tis number"></td>
 									<td class="com-1-pri number"></td>
 									<td class="suppr-1"></td>
 								</tr>
@@ -281,9 +274,12 @@
 							<label for="demo-message">Ajouter un commentaire :</label>
 							<textarea name="message" id="message" placeholder="Ecrivez votre message" rows="6"></textarea>
 						</div>
-						<div class="field half first br">
-							<input type="checkbox" id="demo-copy" name="demo-copy">
-							<label for="demo-copy">Recevoir une copie</label>
+						<div class="row">
+							<div class="one-third column">
+								<label for="date">Date souhaitée</label>
+								<input type="date" name="date" id="date" value="" min="2018-03-01" max="2020-12-31" />
+								<br>
+							</div>
 						</div>
 						<ul align="center" class="actions">
 							<li>

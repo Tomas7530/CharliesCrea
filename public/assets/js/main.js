@@ -44,7 +44,7 @@
         }
 
         // New order.
-        $(function commande(categorie, description, date, prix, name) {
+        $(function commande(categorie, description, tissus, prix, name) {
             var requeteEnCours = false;
 
             // New cart.
@@ -61,7 +61,7 @@
 
             // Add to cart.
             function addToCart(item) {
-                if (!item.category || !item.desc || !item.price) {
+                if (!item.category || !item.desc || !item.tissus || !item.price) {
                     console.log("Item invalide", item);
                     return;
                 }
@@ -110,7 +110,7 @@
                 $('.tableau').empty();
 
                 if (cart.length == 0) {
-                    $('<tr class="0"><td class="com-0-cat"></td><td class="com-0-des"></td><td class="com-0-dat number"></td><td class="com-0-pri number"></td><td class="suppr-0"></td></tr>')
+                    $('<tr class="0"><td class="com-0-cat"></td><td class="com-0-des"></td><td class="com-0-tis number"></td><td class="com-0-pri number"></td><td class="suppr-0"></td></tr>')
                         .appendTo('.tableau');
                     $('.com-0-des').append("Aucune commande");
                 }
@@ -120,7 +120,7 @@
 
                         var ligne = i;
 
-                        $('<tr><td class=\"com-' + ligne + '-cat\"></td><td class=\"com-' + ligne + '-des\"></td><td class=\"com-' + ligne + '-dat number\"></td><td class=\"com-' + ligne + '-pri number\"></td><td class=\"suppr-' + ligne + '\"></td></tr>')
+                        $('<tr><td class=\"com-' + ligne + '-cat\"></td><td class=\"com-' + ligne + '-des\"></td><td class=\"com-' + ligne + '-tis number\"></td><td class=\"com-' + ligne + '-pri number\"></td><td class=\"suppr-' + ligne + '\"></td></tr>')
                             .appendTo('.tableau');
 
 
@@ -137,8 +137,8 @@
                             .empty().append(cart[i].category);
                         $('.com-' + ligne + '-des')
                             .empty().append(cart[i].desc);
-                        $('.com-' + ligne + '-dat')
-                            .empty().append(cart[i].date);
+                        $('.com-' + ligne + '-tis')
+                            .empty().append(cart[i].tissus);
                         $('.com-' + ligne + '-pri')
                             .empty().append(cart[i].price + ' €');
                     }
@@ -157,12 +157,21 @@
                 addButtonTissu(option);
             }
 
+            //tissu selectionné
             function choiceTissu(value) {
                 $('#choix' + rang).replaceWith("<img src=\"images/tissus/" + value + ".png\" id=\"choix" + rang + "\" class=\"image-button\" value=\"" + value + "\" rang=\"" + rang + "\"/>");
 
                 selectItem['tissu' + rang] = value;
 
-                console.log(selectItem);
+                var cart = localStorage.getItem("cart");
+                cart = JSON.parse(cart);
+
+                var tis = cart[0];
+                ti = tis["category"];
+
+                console.log(cart);
+                console.log(tis);
+                console.log(ti);
 
                 $('#option').removeClass('option-activ');
 
@@ -304,7 +313,7 @@
                     }, 100);
                 }, 750);
                 return;
-            }); selectItem
+            });
 
             $('input[class="ajouter"]').click(function () {
                 if (!requeteEnCours) {
