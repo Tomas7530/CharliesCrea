@@ -159,15 +159,33 @@
 
             //tissu selectionné
             function choiceTissu(value) {
-                $('#choix' + rang).replaceWith("<img src=\"images/tissus/" + value + ".png\" id=\"choix" + rang + "\" class=\"image-button\" value=\"" + value + "\" rang=\"" + rang + "\"/>");
 
-                selectItem['tissu' + rang] = value;
+                function getTissus() {
+                    //là
+                }
 
+                var tissus = [];
+
+                //charger selectItem
+                var cart = getCart();
+                cart.push(item);
+                localStorage.setItem("cart", JSON.stringify(cart));
                 var cart = localStorage.getItem("cart");
                 cart = JSON.parse(cart);
 
+                //decouper tissus                
                 var tis = cart[0];
-                ti = tis["category"];
+                ti = tis["tissus"];
+
+                //supprimer tissu n°
+                //ajouter tissu selectionné
+                //ajouter tissus dans selectItem
+                $('#choix' + rang).replaceWith("<img src=\"images/tissus/" + value + ".png\" id=\"choix" + rang + "\" class=\"image-button\" value=\"" + value + "\" rang=\"" + rang + "\"/>");
+
+                tissus['tissu' + rang] = value;
+
+
+
 
                 console.log(cart);
                 console.log(tis);
