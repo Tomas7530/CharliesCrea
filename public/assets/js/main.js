@@ -157,39 +157,40 @@
                 addButtonTissu(option);
             }
 
+            function getTissus() {
+                var tissus = localStorage.getItem("tissus");
+
+                try {
+                    tissus = JSON.parse(tissus);
+                }
+                catch (e) {
+                }
+                return tissus || [];
+            }
+
+            // Clear tissus.
+            function clearTissus() {
+                var tissus = [];
+                localStorage.setItem("tissus", JSON.stringify(tissus));
+                return tissus;
+            }
+
             //tissu selectionné
             function choiceTissu(value) {
+                var tissus = getTissus(),
+                    position = rang - 1;
 
-                function getTissus() {
-                    //là
-                }
+                tissus[position] = " tissu " + rang + " : n° " + value + ",";
+                localStorage.setItem("tissus", JSON.stringify(tissus));
 
-                var tissus = [];
+                selectItem['tissus'] = tissus;
 
-                //charger selectItem
-                var cart = getCart();
-                cart.push(item);
-                localStorage.setItem("cart", JSON.stringify(cart));
-                var cart = localStorage.getItem("cart");
-                cart = JSON.parse(cart);
-
-                //decouper tissus                
-                var tis = cart[0];
-                ti = tis["tissus"];
-
-                //supprimer tissu n°
-                //ajouter tissu selectionné
-                //ajouter tissus dans selectItem
                 $('#choix' + rang).replaceWith("<img src=\"images/tissus/" + value + ".png\" id=\"choix" + rang + "\" class=\"image-button\" value=\"" + value + "\" rang=\"" + rang + "\"/>");
-
-                tissus['tissu' + rang] = value;
-
-
-
-
+                cart = getCart();
                 console.log(cart);
-                console.log(tis);
-                console.log(ti);
+                console.log(tissus);
+                console.log(position);
+                console.log(selectItem);
 
                 $('#option').removeClass('option-activ');
 
@@ -200,6 +201,8 @@
             function newWrapper(cat, name, surname, option) {
                 onRun = true;
                 var $wrapperCat = $('#wrapper-' + cat);
+
+                clearTissus();
 
                 //ssi changement sousCat
                 if (cat == false || cat == "undefined") {
@@ -338,6 +341,8 @@
                     requeteEnCours = true;
                     addToCart(selectItem);
                     refreshTable();
+                    clearTissus();
+                    newWrapper('aucun');
                     requeteEnCours = false;
                 }
 
