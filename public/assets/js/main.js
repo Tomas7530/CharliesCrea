@@ -84,6 +84,27 @@
                 localStorage.setItem("cart", JSON.stringify(cart));
             }
 
+            //total
+            function getTotal() {
+                var total = localStorage.getItem("total");
+
+                try {
+                    total = JSON.parse(total);
+                }
+                catch (e) {
+                }
+                return total || [];
+            }
+
+            //add total json
+            function addTotal(prixTotal) {
+                var total = getTotal();
+                total.splice(0, 1);
+                total.push(prixTotal);
+                localStorage.setItem("total", JSON.stringify(total));
+                console.log(total);
+            }
+
             // Price.
             function getPrixTotal() {
                 var prixTotal = '';
@@ -93,6 +114,8 @@
                 for (var i = 0; i < cart.length; i++) {
                     prixTotal = Number(prixTotal) + Number(cart[i].price);
                 }
+
+                addTotal(prixTotal);
 
                 return prixTotal;
             }
@@ -180,16 +203,14 @@
                 var tissus = getTissus(),
                     position = rang - 1;
 
-                tissus[position] = " tissu " + rang + " : n° " + value + ",";
+                tissus[position] = " tissu " + rang + " : n° " + value;
                 localStorage.setItem("tissus", JSON.stringify(tissus));
 
                 selectItem['tissus'] = tissus;
 
                 $('#choix' + rang).replaceWith("<img src=\"images/tissus/" + value + ".png\" id=\"choix" + rang + "\" class=\"image-button\" value=\"" + value + "\" rang=\"" + rang + "\"/>");
-                cart = getCart();
-                console.log(cart);
+
                 console.log(tissus);
-                console.log(position);
                 console.log(selectItem);
 
                 $('#option').removeClass('option-activ');
@@ -264,23 +285,35 @@
             // Event.
             $('#valid_commande').click(function () {
                 var cart = getCart();
+                var total = getTotal();
                 var name = $('#name').val();
                 var email = $('#email').val();
                 var message = $('#message').val();
                 console.log(cart);
 
-                if (!name || !email || !message) {
-                    alert('manque un champ');
+                if (!name) {
+                    alert('Vous avez oublié de renseigner votre nom !');
                     return;
+                }
+                if (!email) {
+                    alert('Vous avez oublié de renseigner votre adresse mail !');
+                    return;
+                }
+                if (!message) {
+                    var message = name + " n'a pas ajouté de message";
                 }
 
                 $.post("/api/send_mail", {
                     name: name,
                     email: email,
                     message: message,
-                    cart: cart
+                    cart: cart,
+                    total: total
                 }, function (data, status) {
                     console.log(data, status);
+                    clearCart();
+                    refreshTable();
+                    alert("Votre commande à bien été envoyée !");
                 }).fail(function (error, a, b, c) {
                     console.log(error, a, b, c);
                     alert('une erreur est survenu veuillez reesayer');

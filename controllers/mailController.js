@@ -10,16 +10,17 @@ exports.test = async function (req, res) {
         const body = {
             name: 'marie',
             message: 'coucou c\'est mon message',
+            total: '123',
             cart: [{
                 category: 'peluche',
                 desc: 'chat',
                 price: '10',
-                tissu: '15'
+                tissus: " tissu 1 : n° 3, tissu 2 : n° 6, tissu 3 : n° 1."
             }, {
                 category: 'enfant',
                 desc: 'trousse',
                 price: '10',
-                tissu: '1'
+                tissus: " tissu 1 : n° 6, tissu 2 : n° 5, tissu 3 : n° 4."
             }]
 
         }
