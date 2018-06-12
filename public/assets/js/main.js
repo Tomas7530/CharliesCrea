@@ -102,7 +102,6 @@
                 total.splice(0, 1);
                 total.push(prixTotal);
                 localStorage.setItem("total", JSON.stringify(total));
-                console.log(total);
             }
 
             // Price.

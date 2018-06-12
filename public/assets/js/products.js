@@ -167,7 +167,7 @@
 
     //ajouter code html produits
     function addHtml(cat, name, surname, descr, price, option) {
-        $('.' + cat).after("<div class=\"product\" name=\"" + surname + "\" price=\"" + price + "\" descr=\"" + name + "\" option=\"" + option + "\">  <hr>  <h3 class=\"major\">" + name + "</h3>  <p>" + descr + "</p>  <span class=\"image main image-section\">  <img src=\"images/" + surname + ".jpg\" /></span>  <p class=\"sous-section\"><a class=\"personnalise\" name=\"" + name + "\" cat=\"" + cat + "\" surname=\"" + surname + "\" target=\"_blank\">Personnaliser</a></p></div>");
+        $('.' + cat).after("<div class=\"product\" name=\"" + surname + "\" price=\"" + price + "\" descr=\"" + name + "\" option=\"" + option + "\">  <hr>  <h3 class=\"major\">" + name + "</h3>  <p>" + descr + "</p>  <span class=\"image main image-section\">  <img src=\"images/products/" + surname + ".jpg\" /></span>  <p class=\"sous-section\"><a class=\"personnalise\" name=\"" + name + "\" cat=\"" + cat + "\" surname=\"" + surname + "\" target=\"_blank\">Personnaliser</a></p></div>");
 
         $('#select-' + cat).append("<option name=\"" + name + "\" value=\"" + surname + "\" price=\"" + price + "\" option=\"" + option + "\">" + name + "</option>");
     }
