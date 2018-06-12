@@ -235,7 +235,7 @@
                     choiceOption(option);
                     onRun = false;
 
-                    return;
+                    return selectItem;
                 }
 
                 $('select', $('#wrapper-categorie')).val(cat);
