@@ -1,0 +1,37 @@
+{
+  "name": "charlies-crea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.2",
+    "body-parser": "^1.17.2",
+    "cors": "^2.7.1",
+    "debug": "^2.6.8",
+    "ejs": "^2.4.2",
+    "errorhandler": "~1.4.2",
+    "express": "^4.13.3",
+    "express-jwt": "~3.3.0",
+    "lodash": "~3.10.1",
+    "moment": "~2.10.6",
+    "moment-timezone": "^0.5.5",
+    "nodemailer": "^4.6.5",
+    "nodemon": "^1.17.5",
+    "require": "~2.4.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tomas7530/CharliesCrea.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Tomas7530/CharliesCrea/issues"
+  },
+  "homepage": "https://github.com/Tomas7530/CharliesCrea#readme"
+}
